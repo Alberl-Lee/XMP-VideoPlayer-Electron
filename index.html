@@ -30,7 +30,7 @@
     <!-- 本项目js -->
   </head>
   <body class="bkg-color">
-    <div class="level is-mobile dragable titlebar-bkg">
+    <div class="level is-mobile dragable titlebar-bkg mb-0">
       <div class="level-left ml-2">
         <img class="mr-1" height="24" width="24" src="assets/logo.png" />
         <div class="tabs-no-border no-dragable">
@@ -61,10 +61,19 @@
 
     <div class="tab-contents">
       <div class="tab-content is-block">播放</div>
-      <div class="tab-content">片库</div>
-      <div class="tab-content">找片</div>
-      <div class="tab-content">我的</div>
-      <div class="tab-content">云播</div>
+      
+      <div class="tab-content" title="迅雷的视频网站下线了，所以换成其他网站">
+        <iframe src="https://www.bilibili.com/" frameborder="0" style="width: 100%; height: 100%"></iframe>
+      </div>
+      <div class="tab-content" title="很多视频网站禁止了electron访问，所以换成非视频网站">
+        <iframe src="https://bulma.io/" frameborder="0" style="width: 100%; height: 100%"></iframe>
+      </div>
+      <div class="tab-content" title="很多视频网站禁止了electron访问，所以换成非视频网站">
+        <iframe src="https://www.electronjs.org/zh/" frameborder="0" style="width: 100%; height: 100%"></iframe>
+      </div>
+      <div class="tab-content" title="很多视频网站禁止了electron访问，所以换成非视频网站">
+        <iframe src="https://blog.csdn.net/qq316293804/article/details/14162539" frameborder="0" style="width: 100%; height: 100%"></iframe>
+      </div>
     </div>
 
     <script src="./renderer.js"></script>

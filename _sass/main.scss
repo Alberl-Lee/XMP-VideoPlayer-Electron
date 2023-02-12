@@ -37,6 +37,10 @@ body {
   height: 100%;
 }
 
+.fullheight {
+  height: 100%;
+}
+
 // bui是blinkUI的简写
 .bui-no-background {
   @extend .button;
