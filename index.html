@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="thirdparty/fontawesome/css/all.css" />
     <link rel="stylesheet" href="thirdparty/bulma-extensions/bulma-extensions.css" />
     <link rel="stylesheet" href="thirdparty/animate.css" />
+    <link rel="stylesheet" href="thirdparty/bootstrap/css/bootstrap.min.css" />
 
     <!-- 本项目CSS -->
     <link href="dist/css/main.css" rel="stylesheet" />
@@ -60,8 +61,35 @@
     </div>
 
     <div class="tab-contents">
-      <div class="tab-content is-block">播放</div>
-      
+      <div class="tab-content is-block">
+        <div class="level is-mobile dragable mb-0">
+          <div class="level-left ml-2 titlebar-bkg" width="200">
+            <img class="mr-1" height="24" width="24" src="assets/logo.png" />
+            <section id="accordion2" class="mb-6">
+              <div class="group">
+                <h3 class="button is-primary is-outlined">&nbsp;Section 1： Drag me to sort 【拖拽我 可以排序】</h3>
+                <div>
+                  <p>
+                    Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam
+                    a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+                  </p>
+                </div>
+              </div>
+              <div class="group">
+                <h3 class="button is-primary">&nbsp;Section 2</h3>
+                <section>
+                  <p>
+                    Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor velit,
+                    faucibus interdum tellus libero ac justo. Vivamus non quam. In suscipit faucibus urna.
+                  </p>
+                </section>
+              </div>
+            </section>
+          </div>
+          <div class=""></div>
+        </div>
+      </div>
+
       <div class="tab-content" title="迅雷的视频网站下线了，所以换成其他网站">
         <iframe src="https://www.bilibili.com/" frameborder="0" style="width: 100%; height: 100%"></iframe>
       </div>
@@ -76,7 +104,8 @@
       </div>
     </div>
 
-    <script src="./renderer.js"></script>
-    <script src="./titlebar.js"></script>
+    <script src="thirdparty/bootstrap/js/bootstrap.min.js"></script>
+    <script src="renderer.js"></script>
+    <script src="titlebar.js"></script>
   </body>
 </html>
