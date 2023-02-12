@@ -29,11 +29,19 @@
 
     <!-- 本项目js -->
   </head>
-  <body>
-    <div class="level is-mobile dragable grad-gray">
+  <body class="bkg-color">
+    <div class="level is-mobile dragable titlebar-bkg">
       <div class="level-left ml-2">
         <img class="mr-1" height="24" width="24" src="assets/logo.png" />
-        <p>Electron demo - by 中国Alberl</p>
+        <div class="tabs-no-border no-dragable">
+          <ul>
+            <li class="is-active"><button class="xmp-btn-titleText">播放</button></li>
+            <li><button class="xmp-btn-titleText">片库</button></li>
+            <li><button class="xmp-btn-titleText">找片</button></li>
+            <li><button class="xmp-btn-titleText">我的</button></li>
+            <li><button class="xmp-btn-titleText">云播</button></li>
+          </ul>
+        </div>
       </div>
       <div class="level-right no-dragable">
         <button class="bui-btn-min" title="最小化">
@@ -49,6 +57,14 @@
           <i class="fa-solid fa-xmark"></i>
         </button>
       </div>
+    </div>
+
+    <div class="tab-contents">
+      <div class="tab-content is-block">播放</div>
+      <div class="tab-content">片库</div>
+      <div class="tab-content">找片</div>
+      <div class="tab-content">我的</div>
+      <div class="tab-content">云播</div>
     </div>
 
     <script src="./renderer.js"></script>
