@@ -1,7 +1,26 @@
 @charset "utf-8";
+
+// 改变默认值
+$accordion-bg: #111111;
+$accordion-color: #c8c6cb;
+// $accordion-button-color: blue;
+$accordion-button-bg: #1d2537;
+$accordion-button-active-bg: #1d2537;
+$accordion-button-active-color: $accordion-color;
+// $accordion-button-focus-border-color: #ff0000;
+$accordion-button-focus-box-shadow: #c8c6cb; // 只要定义这个，就没有border了
+
+$accordion-border-width: 10;
+// $accordion-border-color: $accordion-bg;
+$accordion-border-color: red;
+
+// $accordion-body-padding-y:                 4rem;
+// $accordion-body-padding-x:                 4rem;
+
 // $primary: red;
 // 在import之前改变primary等颜色，这样 is-primary的css颜色就会变成red
 @import "../thirdparty/bulma/bulma.sass";
+@import "../thirdparty/bootstrap/scss/bootstrap.scss";
 
 // -------- 常用css --------
 .hidden {
@@ -174,4 +193,25 @@ body {
 
 .bkg-color {
   background-color: #070707;
+}
+
+.bkg-color-playlist {
+  background-color: $accordion-bg;
+}
+
+.xmp-text-color {
+  color: #c8c6cb;
+}
+
+#id_footer {
+  height: 40px; /*设定footer高度*/
+
+  width: 100%; /*展开footer宽度*/
+  background-color: yellow;
+  line-height: 40px;
+}
+
+.bui-footer {
+  position: absolute; /*设定footer绝对位置在底部*/
+  bottom: 0;
 }
