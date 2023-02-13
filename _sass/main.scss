@@ -27,6 +27,26 @@ $accordion-border-color: red;
   display: none;
 }
 
+.red {
+  background: #d81b21;
+}
+
+.green {
+  background: green;
+}
+
+.blue {
+  background: blue;
+}
+
+.pink {
+  background: pink;
+}
+
+.yellow {
+  background: yellow;
+}
+
 // 垂直水平居中 子元素
 .childToCenter {
   display: flex !important;
@@ -203,15 +223,22 @@ body {
   color: #c8c6cb;
 }
 
-#id_footer {
-  height: 40px; /*设定footer高度*/
-
-  width: 100%; /*展开footer宽度*/
-  background-color: yellow;
-  line-height: 40px;
+.flex-column {
+  // width:100vw;
+  // height:100vh;
+  display: flex;
+  flex-flow: column nowrap; /* 纵向排列 */
+  // overflow:hidden;
 }
 
-.bui-footer {
-  position: absolute; /*设定footer绝对位置在底部*/
-  bottom: 0;
+.height-remain {
+  flex: 1; /* 吸收剩余空间 */
+}
+
+.flex-full {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  align-content: stretch;
+  flex-wrap: wrap;
 }

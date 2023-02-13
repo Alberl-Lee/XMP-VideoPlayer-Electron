@@ -29,12 +29,12 @@
 
     <!-- 本项目js -->
   </head>
-  <body class="bkg-color">
-    <div class="level is-mobile dragable titlebar-bkg mb-0">
+  <body class="bkg-color flex-column">
+    <div class="level is-mobile dragable1 titlebar-bkg mb-0">
       <div class="level-left ml-2">
         <img class="mr-1" height="24" width="24" src="assets/logo.png" />
         <div class="tabs-no-border no-dragable">
-          <ul>
+          <ul class="m-0">
             <li class="is-active"><button class="xmp-btn-titleText">播放</button></li>
             <li><button class="xmp-btn-titleText">片库</button></li>
             <li><button class="xmp-btn-titleText">找片</button></li>
@@ -59,10 +59,10 @@
       </div>
     </div>
 
-    <div class="tab-contents is-flex1">
-      <div class="tab-content is-block">
-        <div class="columns is-gapless is-mobile fullheight">
-          <div class="column is-narrow fullheight bkg-color-playlist" style="width: 325px">
+    <div class="tab-contents height-remain flex-full">
+      <div class="tab-content is-block is-flex-grow-1 is-flex">
+        <div class="columns is-gapless is-mobile is-flex-grow-1">
+          <div class="column is-narrow bkg-color-playlist" style="width: 325px">
             <div id="accordionExample" class="accordion accordion-flush m-1">
               <div class="accordion-item">
                 <h2 class="accordion-header" id="headingOne">
@@ -116,19 +116,20 @@
               </div>
             </div>
           </div>
-          <div class="column is-flex is-justify-content-center1 bkg-color-playlist">
-            <div>
-              <div class="is-align-self-center bkg-color">
-                <p class="title">Small hero</p>
+          <div class="column is-flex is-flex-direction-column">
+            <div class="bkg-color-playlist" style="height: 30px">
+              <p class="subtitle1">This column will take up the remaining space available.</p>
+            </div>
+            <div class="is-flex-grow-1 is-flex is-justify-content-center">
+              <div class="is-align-self-center bkg-color-playlist">
+                <p class="title1">Small hero</p>
                 <p class="subtitle">vCenter and hCenter</p>
                 <p class="subtitle">vCenter and hCenter</p>
               </div>
             </div>
 
-            <div id="id_footer1" class="bui-footer1 is-align-self-flex-end1">
-              <div class="container1">
-                <p class="subtitle1">This column will take up the remaining space available.</p>
-              </div>
+            <div class="bkg-color-playlist" style="height: 50px">
+              <p class="subtitle1">This column will take up the remaining space available.</p>
             </div>
           </div>
         </div>
