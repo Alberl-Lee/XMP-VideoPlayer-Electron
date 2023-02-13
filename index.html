@@ -44,16 +44,16 @@
         </div>
       </div>
       <div class="level-right no-dragable">
-        <button class="bui-btn-min" title="最小化">
+        <button class="bui-btn-min has-text-grey-light" title="最小化">
           <i class="fa-solid fa-minus"></i>
         </button>
         <button class="bui-btn-restore" title="还原">
           <i class="fa-regular fa-window-restore"></i>
         </button>
-        <button class="bui-btn-max" title="最大化">
+        <button class="bui-btn-max has-text-grey-light" title="最大化">
           <i class="fa-regular fa-window-maximize"></i>
         </button>
-        <button class="bui-btn-close" title="关闭">
+        <button class="bui-btn-close has-text-grey-light" title="关闭">
           <i class="fa-solid fa-xmark"></i>
         </button>
       </div>
@@ -118,18 +118,85 @@
           </div>
           <div class="column is-flex is-flex-direction-column">
             <div class="bkg-color-playlist" style="height: 30px">
-              <p class="subtitle1">This column will take up the remaining space available.</p>
-            </div>
-            <div class="is-flex-grow-1 is-flex is-justify-content-center">
-              <div class="is-align-self-center bkg-color-playlist">
-                <p class="title1">Small hero</p>
-                <p class="subtitle">vCenter and hCenter</p>
-                <p class="subtitle">vCenter and hCenter</p>
+              <div class="field is-horizontal is-mobile mt-1">
+                <div class="field-body">
+                  <div class="field">
+                    <input class="input bkg-color-input xmp-gray-text-color" style="height: 26px" type="text" placeholder="请输入播放地址" />
+                  </div>
+                </div>
+
+                <span id="btn_refresh" class="is-small bui-no-background">
+                  <span class="btn-4img"> </span>
+                </span>
               </div>
             </div>
 
-            <div class="bkg-color-playlist" style="height: 50px">
-              <p class="subtitle1">This column will take up the remaining space available.</p>
+            <div class="is-flex-grow-1 is-flex is-justify-content-center">
+              <div class="is-align-self-center center-bkg is-flex is-justify-content-center" style="width: 336px; height: 260px">
+                <div class="is-align-self-flex-end">
+                  <div class="field has-addons">
+                    <button id="btn_open" class="bui-no-background">
+                      <span class="btn-4img"> </span>
+                    </button>
+                    <button id="btn_open2" class="bui-no-background">
+                      <span class="btn-4img"> </span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="bkg-color-playlist1" style="height: 48px">
+              <div class="level is-mobile">
+                <div class="level-left">
+                  <div class="level-item">
+                    <span id="btnPlaylistShow" title="显示播放列表" class="is-small bui-no-background">
+                      <span class="btn-4img"> </span>
+                    </span>
+                    <span id="btnPlaylistHide" title="隐藏播放列表" class="is-small bui-no-background">
+                      <span class="btn-4img"> </span>
+                    </span>
+                  </div>
+                </div>
+
+                <div class="level-item">
+                  <span id="btnStop" title="停止" class="is-small bui-no-background">
+                    <span class="btn-4img"> </span>
+                  </span>
+                  <span id="btnPrevious" title="上一个" class="is-small bui-no-background">
+                    <span class="btn-4img"> </span>
+                  </span>
+                  <span id="btnPlay" title="播放" class="is-small bui-no-background">
+                    <span class="btn-4img"> </span>
+                  </span>
+                  <span id="btnPause" title="暂停" class="is-small bui-no-background">
+                    <span class="btn-4img"> </span>
+                  </span>
+                  <span id="btnNext" title="下一个" class="is-small bui-no-background">
+                    <span class="btn-4img"> </span>
+                  </span>
+                  <span id="btnVolume" title="静音" class="is-small bui-no-background">
+                    <span class="btn-4img"> </span>
+                  </span>
+                  <span id="btnVolumeZero" title="取消静音" class="is-small bui-no-background">
+                    <span class="btn-4img"> </span>
+                  </span>
+                </div>
+
+                <div class="level-right">
+                  <div class="level-item">
+                    <span id="btnOpenMini" title="打开文件" class="is-small bui-no-background">
+                      <span class="btn-4img"> </span>
+                    </span>
+                    <span id="btnScreenFull" title="全屏" class="is-small bui-no-background">
+                      <span class="btn-4img"> </span>
+                    </span>
+                    <span id="btnScreenNormal" title="退出全屏" class="is-small bui-no-background">
+                      <span class="btn-4img"> </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

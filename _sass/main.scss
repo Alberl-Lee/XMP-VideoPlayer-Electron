@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-// 改变默认值
+// 改变bootstrap的默认值
 $accordion-bg: #111111;
 $accordion-color: #c8c6cb;
 // $accordion-button-color: blue;
@@ -17,7 +17,16 @@ $accordion-border-color: red;
 // $accordion-body-padding-y:                 4rem;
 // $accordion-body-padding-x:                 4rem;
 
-// $primary: red;
+// 改变bulma的默认值
+
+$primary: pink;
+// $blue:   red;
+$link: #154b83; // focus border的颜色也都是这个
+
+$border: #0e0e0e;
+$border-hover: #154b83;
+// $input-focus-border-color
+
 // 在import之前改变primary等颜色，这样 is-primary的css颜色就会变成red
 @import "../thirdparty/bulma/bulma.sass";
 @import "../thirdparty/bootstrap/scss/bootstrap.scss";
@@ -45,6 +54,10 @@ $accordion-border-color: red;
 
 .yellow {
   background: yellow;
+}
+
+.red-text {
+  color: #d81b21;
 }
 
 // 垂直水平居中 子元素
@@ -215,12 +228,20 @@ body {
   background-color: #070707;
 }
 
+.bkg-color-input {
+  background-color: #0e0e0e;
+}
+
 .bkg-color-playlist {
   background-color: $accordion-bg;
 }
 
 .xmp-text-color {
   color: #c8c6cb;
+}
+
+.xmp-gray-text-color {
+  color: #8f99a4;
 }
 
 .flex-column {
@@ -242,3 +263,56 @@ body {
   align-content: stretch;
   flex-wrap: wrap;
 }
+
+.center-bkg {
+  background: 
+    // 第1个url图显示在最上层，y坐标是78px，也可以改成30%，x坐标是50%，代表水平居中
+    url("/assets/skin/bk_logo_text.png") 50% 78px no-repeat,
+    //
+    url("/assets/skin/bk_logo_image.png") 100% 50% no-repeat,
+    url("/assets/skin/bk_logo_light.png") 100% 100% no-repeat;
+  background-size: auto auto, auto auto, 100% 100%;
+}
+
+.btn-4img {
+  // background-image: url("/assets/skin/btn_open.png"); //设置背景图片
+  // background-size: 355px 16px; // 设置背景图片的大小，相当于图片实际宽高等比例饿缩放的
+  background-repeat: no-repeat;
+  background-position: 0px 0px; // 设置背景图片的的偏移量，这个-50相当于背景整体向左偏移50，就可以显示图片的中心
+  background-color: transparent;
+}
+
+#btn_open {
+  background: url("/assets/skin/btn_bk.png") 100% 100% no-repeat;
+  background-size: 100% 100%;
+  width: 198px;
+  height: 40px;
+}
+
+#btn_open2 {
+  margin-top: 1px;
+  margin-left: -17px;
+}
+
+// // 改变字体大小有效，但颜色只在浏览器有效，在electron无效
+// // 不用bulma、bootstrap就正常
+// input::placeholder {
+//   color: green;
+//   // font-size: 1.2em;
+//   // font-style: italic;
+// }
+
+// ::placeholder {
+//   color: green;
+//   // font-size: 1.2em;
+//   // font-style: italic;
+// }
+
+.bkimg-light {
+  // background-size: 355px 16px; // 设置背景图片的大小，相当于图片实际宽高等比例饿缩放的
+  // background-position: 0px 0px; // 设置背景图片的的偏移量，这个-50相当于背景整体向左偏移50，就可以显示图片的中心
+  // background-color: transparent;
+  background: url("/assets/skin/light_top.png") 100% 100% no-repeat;
+  background-size: 100% 100%;
+}
+
