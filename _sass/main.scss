@@ -1,6 +1,13 @@
 @charset "utf-8";
 
 // 改变bootstrap的默认值
+$input-color: #8f99a4;
+$input-bg: #2e2e2e;
+$form-select-border-width: 0;
+$form-select-focus-width: 0;
+$form-select-bg: transparent;
+$form-select-indicator-color: $input-color;
+
 $accordion-bg: #111111;
 $accordion-color: #c8c6cb;
 // $accordion-button-color: blue;
@@ -19,11 +26,11 @@ $accordion-border-color: red;
 
 // 改变bulma的默认值
 
-$primary: pink;
+// $primary: pink;
 // $blue:   red;
 $link: #154b83; // focus border的颜色也都是这个
 
-$border: #0e0e0e;
+$border: #0c0c0c;
 $border-hover: #154b83;
 // $input-focus-border-color
 
@@ -93,6 +100,35 @@ body {
   height: 100%;
 }
 
+.scroll {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+// 自定义滚动条样式
+::-webkit-scrollbar {
+  width: 16px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: $accordion-bg;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #1b1b1b;
+  border-radius: 8px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #333333;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: #222222;
+}
+
 // bui是blinkUI的简写
 .bui-no-background {
   @extend .button;
@@ -140,6 +176,11 @@ body {
   }
 }
 
+.bui-btn-img {
+  @extend .bui-no-background;
+  @extend .p-0;
+}
+
 .bui-btn-titlebar {
   @extend .bui-no-background;
   @extend .is-light;
@@ -173,6 +214,25 @@ body {
   -webkit-app-region: no-drag;
 }
 
+/*横条样式*/
+input[type="range"] {
+  // -webkit-appearance: none; /*清除系统默认样式*/
+  // width: 100%;
+  background: -webkit-linear-gradient(#005aae, #005aae) no-repeat, #ddd; /*设置左边颜色为#61bd12，右边颜色为#ddd*/
+  background-size: 75% 100%; /*设置左右宽度比例*/
+  height: 3px; /*横条的高度*/
+}
+/*拖动块的样式*/
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /*清除系统默认样式*/
+
+  height: 10px; /*拖动块高度*/
+  width: 10px; /*拖动块宽度*/
+  background: #999999; /*拖动块背景*/
+  border-radius: 50%;
+  // border: solid 1px yellow;
+}
+
 // -------- 其他 --------
 .pointer-cursor {
   cursor: pointer;
@@ -197,7 +257,8 @@ body {
 
 // -------- 本项目的css，不通用的都放这块 --------
 .titlebar-bkg {
-  background: url("/assets/skin/caption_bk.png") 100% 100% no-repeat, linear-gradient(#0e1a2f, #060606);
+  // 因为css路径是这个dist/css/main.css，所以要用../../
+  background: url("../../assets/skin/caption_bk.png") 100% 100% no-repeat, linear-gradient(#0e1a2f, #060606);
   background-size: 100% 100%;
 }
 
@@ -244,6 +305,26 @@ body {
   color: #8f99a4;
 }
 
+// 改变所有的placeholder
+// ::placeholder {
+//   color: red !important;
+//   // font-size: 1.2em;
+//   // font-style: italic;
+// }
+
+// 只改变input的placeholder
+input::placeholder {
+  color: #4b4f51 !important;
+}
+
+.font-normal {
+  font-size: 0.88em;
+}
+
+.font-sm {
+  font-size: 0.78em;
+}
+
 .flex-column {
   // width:100vw;
   // height:100vh;
@@ -267,15 +348,15 @@ body {
 .center-bkg {
   background: 
     // 第1个url图显示在最上层，y坐标是78px，也可以改成30%，x坐标是50%，代表水平居中
-    url("/assets/skin/bk_logo_text.png") 50% 78px no-repeat,
+    url("../../assets/skin/bk_logo_text.png") 50% 78px no-repeat,
     //
-    url("/assets/skin/bk_logo_image.png") 100% 50% no-repeat,
-    url("/assets/skin/bk_logo_light.png") 100% 100% no-repeat;
+    url("../../assets/skin/bk_logo_image.png") 100% 50% no-repeat,
+    url("../../assets/skin/bk_logo_light.png") 100% 100% no-repeat;
   background-size: auto auto, auto auto, 100% 100%;
 }
 
 .btn-4img {
-  // background-image: url("/assets/skin/btn_open.png"); //设置背景图片
+  // background-image: url("../../assets/skin/btn_open.png"); //设置背景图片
   // background-size: 355px 16px; // 设置背景图片的大小，相当于图片实际宽高等比例饿缩放的
   background-repeat: no-repeat;
   background-position: 0px 0px; // 设置背景图片的的偏移量，这个-50相当于背景整体向左偏移50，就可以显示图片的中心
@@ -283,36 +364,57 @@ body {
 }
 
 #btn_open {
-  background: url("/assets/skin/btn_bk.png") 100% 100% no-repeat;
+  background: url("../../assets/skin/btn_bk.png") 100% 100% no-repeat;
   background-size: 100% 100%;
-  width: 198px;
+  width: 158px;
   height: 40px;
 }
-
-#btn_open2 {
-  margin-top: 1px;
-  margin-left: -17px;
-}
-
-// // 改变字体大小有效，但颜色只在浏览器有效，在electron无效
-// // 不用bulma、bootstrap就正常
-// input::placeholder {
-//   color: green;
-//   // font-size: 1.2em;
-//   // font-style: italic;
-// }
-
-// ::placeholder {
-//   color: green;
-//   // font-size: 1.2em;
-//   // font-style: italic;
-// }
 
 .bkimg-light {
   // background-size: 355px 16px; // 设置背景图片的大小，相当于图片实际宽高等比例饿缩放的
   // background-position: 0px 0px; // 设置背景图片的的偏移量，这个-50相当于背景整体向左偏移50，就可以显示图片的中心
   // background-color: transparent;
-  background: url("/assets/skin/light_top.png") 100% 100% no-repeat;
+  background: url("../../assets/skin/light_top.png") 100% 100% no-repeat;
   background-size: 100% 100%;
 }
 
+.btn-list {
+  background-image: url("../../assets/skin/treeview_header.png"); //设置背景图片
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  height: 34px;
+}
+
+.text-list-item {
+  @extend .font-sm;
+  @extend .xmp-gray-text-color;
+}
+
+.bstreeview {
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0;
+  border-style: none;
+}
+
+.bstreeview .list-group-item {
+  background-color: transparent;
+  color: #8f99a4;
+  border-radius: 0;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+}
+
+.bstreeview .list-group-item:hover {
+  background-color: #1b1b1b;
+}
+
+.bstreeview .list-group-item:focus,
+.bstreeview .list-group-item:active {
+  background-color: #151c2c;
+}
+
+option {
+  background-color: $input-bg;
+}
