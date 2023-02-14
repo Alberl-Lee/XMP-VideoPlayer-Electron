@@ -63,7 +63,7 @@
     <div class="tab-contents height-remain flex-full">
       <div class="tab-content is-block is-flex-grow-1 is-flex">
         <div class="columns is-gapless is-mobile is-flex-grow-1">
-          <div class="column is-narrow bkg-color-playlist" style="width: 325px">
+          <div class="hidden-when-play column is-narrow bkg-color-playlist" style="width: 325px">
             <div class="mr-1" style="height: 30px">
               <div class="field is-horizontal is-mobile">
                 <span id="btnFont" class="is-small bui-btn-img">
@@ -149,7 +149,7 @@
             </div>
           </div>
           <div class="column is-flex is-flex-direction-column">
-            <div class="bkg-color-playlist" style="height: 30px">
+            <div class="hidden-when-play bkg-color-playlist" style="height: 30px">
               <div class="field is-horizontal is-mobile">
                 <div class="field-body">
                   <div class="field">
@@ -163,7 +163,7 @@
               </div>
             </div>
 
-            <div class="is-flex-grow-1 is-flex is-justify-content-center">
+            <div class="hidden-when-play is-flex-grow-1 is-flex is-justify-content-center">
               <div class="is-align-self-center center-bkg is-flex is-justify-content-center" style="width: 336px; height: 260px">
                 <div class="is-align-self-flex-end">
                   <div class="field has-addons">
@@ -178,8 +178,17 @@
               </div>
             </div>
 
-            <div style="height: 48px">
-              <div class="level is-mobile">
+            <div class="hidden show-when-play is-flex-grow-1 is-align-self-center mt-2 is-flex">
+              <div class="is-align-self-center pt-2">
+                <video id="video"></video>
+                <!-- <video id="video"  controls="true" src="_movie_test.mp4" height="300" autoplay="autoplay"></video> -->
+                <!-- <video id="video" src="_movie_test.webm"></video> -->
+                <!-- <video id="video" src="_movie_test.mp4"   ></video> -->
+              </div>
+            </div>
+
+            <div id="playPanel" style="height: 60px" class="stickyRightBottom flex-column childToCenter">
+              <div class="level is-mobile is-align-self-stretch">
                 <div class="level-left">
                   <div class="level-item">
                     <span id="btnPlaylistShow" title="显示播放列表" class="is-small bui-btn-img">
@@ -191,7 +200,7 @@
                   </div>
                 </div>
 
-                <div class="level-item">
+                <div class="level-item ml-6">
                   <span id="btnStop" title="停止" class="is-small bui-btn-img">
                     <span class="btn-4img"> </span>
                   </span>

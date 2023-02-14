@@ -40,7 +40,7 @@ $border-hover: #154b83;
 
 // -------- 常用css --------
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 .red {
@@ -297,6 +297,10 @@ input[type="range"]::-webkit-slider-thumb {
   background-color: $accordion-bg;
 }
 
+.bkg-color-translucent {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 .xmp-text-color {
   color: #c8c6cb;
 }
@@ -417,4 +421,16 @@ input::placeholder {
 
 option {
   background-color: $input-bg;
+}
+
+.stickyRightBottom {
+  position: sticky;
+  right: 0px;
+  bottom: 0px;
+}
+
+.stickyLeftTop {
+  position: sticky;
+  left: 0px;
+  top: 0px;
 }

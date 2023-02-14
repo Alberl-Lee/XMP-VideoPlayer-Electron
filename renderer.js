@@ -158,3 +158,42 @@ $("#treeLiveCenter").bstreeview({
   collapseIcon: "fa-solid fa-plus",
   parentsMarginLeft: "0rem",
 });
+
+let g_video = window.document.querySelector("#video");
+// 点击切换暂停、播放
+$("#video").click(function () {
+  if (g_video.paused) {
+    g_video.play();
+  } else {
+    g_video.pause();
+  }
+});
+
+$("#btnPlay").click(function (e) {
+  // canPlayType()
+  if (!g_video.src) {
+    g_video.src = "_movie_test.mp4";
+  }
+  g_video.play();
+
+  // $(".hidden-when-play").hide(); // 对于加了important的无效，对有些flex也无效
+  $(".hidden-when-play").addClass("hidden");
+  $("#playPanel").addClass("bkg-color-translucent");
+
+  $(".show-when-play").removeClass("hidden");
+});
+
+$("#btnStop").click(function (e) {
+  g_video.pause();
+  g_video.removeAttribute("src");
+  g_video.load();
+
+  $(".hidden-when-play").removeClass("hidden");
+  $("#playPanel").removeClass("bkg-color-translucent");
+
+  $(".show-when-play").addClass("hidden");
+});
+
+$("#btnPause").click(function (e) {
+  g_video.pause();
+});
