@@ -32,10 +32,6 @@ $(".bui-btn-min").click(function (e) {
   ipcRenderer.send("window-event", "minimize");
 });
 
-$(".tt").click(function (e) {
-  ipcRenderer.send("window-event", "minimize");
-});
-
 $(".bui-btn-close").click(function (e) {
   ipcRenderer.send("window-event", "close");
 });

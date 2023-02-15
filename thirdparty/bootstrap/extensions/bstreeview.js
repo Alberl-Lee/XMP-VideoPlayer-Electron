@@ -156,6 +156,11 @@
                 if (node.id) {
                     treeItem.attr('id', node.id);
                 }
+                // Add custom id to node if present
+                if (node['data-custom']) {
+                    treeItem.attr('data-custom', node['data-custom']);
+                }
+
                 // Attach node to parent.
                 parentElement.append(treeItem);
                 // Build child nodes.

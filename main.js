@@ -59,6 +59,9 @@ function initTitlebar(win) {
       case "close":
         window.close();
         break;
+      case "toggle-FullScreen":
+        window.isFullScreen() ? window.setFullScreen(false) : window?.setFullScreen(true);
+        break;
       case "is-maximized":
         event.returnValue = window.isMaximized();
         break;

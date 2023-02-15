@@ -40,7 +40,17 @@ $border-hover: #154b83;
 
 // -------- 常用css --------
 .hidden {
+  display: none;
+}
+
+// show hide不生效，要用removeClass("hiddenImportant")
+.hiddenImportant {
   display: none !important;
+}
+
+// 隐藏，但是占位
+.hiddenVisibility {
+  visibility: hidden;
 }
 
 .red {
@@ -243,6 +253,10 @@ input[type="range"]::-webkit-slider-thumb {
   pointer-events: none;
 }
 
+.flex {
+  display: flex;
+}
+
 .tab-content {
   display: none;
 }
@@ -397,7 +411,8 @@ input::placeholder {
 
 .bstreeview {
   background-color: transparent;
-  border: 1px solid rgba(0, 0, 0, 0.125);
+  // border: 1px solid rgba(0, 0, 0, 0.125);
+  border: 0px;
   border-radius: 0;
   border-style: none;
 }
@@ -414,8 +429,14 @@ input::placeholder {
   background-color: #1b1b1b;
 }
 
-.bstreeview .list-group-item:focus,
-.bstreeview .list-group-item:active {
+// .bstreeview .list-group-item:focus,
+// .bstreeview .list-group-item:active {
+//   background-color: #151c2c;
+// }
+
+.list-group-item.active {
+  // color: green;
+  border-color: transparent;
   background-color: #151c2c;
 }
 
