@@ -22,7 +22,7 @@ $(".tabs-no-border>ul>li").click(function (e) {
   let tabNow = $(".tab-contents").children().eq($(this).index());
   tabNow.addClass("is-block").siblings().removeClass("is-block");
 
-  if ($("#flexTab") == tabNow) {
+  if ("flexTab" == tabNow.attr("id")) {
     $("#flexTab").removeClass("is-block").addClass("is-flex");
   } else {
     $("#flexTab").removeClass("is-flex");
