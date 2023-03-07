@@ -1,14 +1,26 @@
 {
-  "name": "electron-quick-start",
+  "name": "XMP-Player-Electron",
   "version": "1.0.0",
+  "description": "高仿迅雷播放器",
+  "author": "Alberl Lee",
   "main": "main.js",
   "scripts": {
     "css-build": "node-sass   _sass/ --output dist/css/",
     "css-watch": "npm run css-build -- --watch ",
     "electron": "electron .",
-    "start": "npm-run-all --parallel css-watch electron"
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
   },
   "devDependencies": {
+    "@electron-forge/cli": "^6.0.5",
+    "@electron-forge/maker-deb": "^6.0.5",
+    "@electron-forge/maker-rpm": "^6.0.5",
+    "@electron-forge/maker-squirrel": "^6.0.5",
+    "@electron-forge/maker-zip": "^6.0.5",
     "electron": "^22.0.2"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0"
   }
 }
